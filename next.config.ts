@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
     },
   },
   reactStrictMode: true,
+  allowedDevOrigins: ['iot-tracker.duo.cloud'],
 };
 
 export default nextConfig;
