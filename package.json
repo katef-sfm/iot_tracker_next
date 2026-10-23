@@ -16,6 +16,7 @@
     "@fortawesome/fontawesome-free": "^7.3.1",
     "@hono/node-server": "^2.1.5",
     "@lightningchart/lcjs": "^9.0.0",
+    "axios": "^1.20.0",
     "hono": "^4.13.13",
     "next": "^16.4.2",
     "react": "^19.3.1",
