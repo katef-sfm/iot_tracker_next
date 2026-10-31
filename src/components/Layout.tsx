@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useAuth } from "@/contexts/AuthContext";
+import { useServer } from "@/contexts/ServerContext";
 import JwtProfiler from "@/components/JwtProfiler";
 
 const nav = [
@@ -14,6 +15,7 @@ const nav = [
 export default function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const { user, logout, token } = useAuth();
+  const { servers, server, setServer } = useServer();
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -22,6 +24,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Link href="/" className="text-xl font-bold text-blue-600">
             IoT Tracker
           </Link>
+          <select
+            value={server}
+            onChange={(e) => setServer(e.target.value)}
+            className="rounded border px-2 py-1 text-sm"
+          >
+            {servers.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
           <nav className="flex gap-4">
             {nav.map((n) => (
               <Link
