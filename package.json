@@ -1,7 +1,8 @@
 {
   "name": "iot_tracker_hono",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,9 +21,13 @@
     "hono": "^4.13.13",
     "next": "^16.4.2",
     "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react-dom": "^19.3.1",
+    "@influxdata/influxdb3-client": "^2.0.0",
+    "@influxdata/influxdb3-client-browser": "^2.0.0",
+    "@influxdata/influxdb3-mcp-server": "^2.0.0"
   },
   "devDependencies": {
+    "dotenv": "^16.3.1",
     "@types/bun": "latest",
     "@biomejs/biome": "2.4.2",
     "@tailwindcss/turbopack": "^4",

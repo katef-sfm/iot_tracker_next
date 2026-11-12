@@ -7,10 +7,22 @@ bun install
 
 To run:
 ```sh
-bun run dev
+bun run dev --hostname "0.0.0.0"
 ```
 
 open http://localhost:3000
+
+To build:
+
+```sh
+bun run build
+
+# Enables a more verbose build output.
+bun run build --debug
+
+# Enables production profiling for React.
+bun run build --profile
+```
 
 ---------------------------------------------
 
